@@ -23,4 +23,12 @@ describe( 'basket', function() {
     assert.equal( 4, basket.items.length );
   });
 
+  it( 'Checks the total price of an individual item', function() {
+    assert.equal( 3, basket.sumItemPrice(basket.items[1]));
+  });
+
+  // it( 'Check total price of the basket', function() {
+  //   assert.equal( 13.99, basket.totalPrice );
+  // });
+
 });

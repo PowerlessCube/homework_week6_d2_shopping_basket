@@ -1,7 +1,7 @@
 {
   "name": "shopping_basket",
   "version": "1.0.0",
-  "description": "",
+  "description": "Week6, day2 homework modeling a shopping basket",
   "main": "basket.js",
   "scripts": {
     "test": "mocha specs"

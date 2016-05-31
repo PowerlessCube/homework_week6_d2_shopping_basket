@@ -3,6 +3,7 @@
 //total cost should be £6, item quantity should
 
 var basket = {
+
   items: [
     item1 = {
       name: "pasta",
@@ -29,13 +30,20 @@ var basket = {
       offer: false
     }
   ],
+
   add: function(item) {
-    basket.items.unshift(item);
+    this.items.unshift(item);
   },
+
   remove: function() {
-    basket.items.pop();
-    console.log(basket.items);
+    this.items.pop();
+  },
+
+  sumItemPrice: function(item) {
+    var sumItemPrice = (item.price * item.quantity);
+    return sumItemPrice;
   }
+
 };
 
 //unshift was not working in my test, cheated and used .pop method instead.  Will need to come back tot his one.
