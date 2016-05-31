@@ -25,7 +25,7 @@ var basket = {
     },
     item4 = {
       name: "Deep Heat",
-      quantity: 1,
+      quantity: 3,
       price: 7.99,
       offer: false
     }
@@ -51,6 +51,8 @@ var basket = {
     }
     return totalPrice;
   }
+
+
 
 };
 
