@@ -42,6 +42,14 @@ var basket = {
   sumItemPrice: function(item) {
     var sumItemPrice = (item.price * item.quantity);
     return sumItemPrice;
+  },
+
+  totalPrice: function() {
+    var totalPrice = 0;
+    for (var i = 0; i < this.items.length; i++) {
+      totalPrice += this.sumItemPrice(this.items[i]);
+    }
+    return totalPrice;
   }
 
 };
