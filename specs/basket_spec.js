@@ -1,7 +1,7 @@
 var basket = require( '../basket' );
 var assert = require( 'chai' ).assert;
 
-describe( 'basket', function() {
+describe( 'Basket Basic Functions', function() {
   it( 'Tests existance of items', function() {
     assert.equal( 4, basket.items.length );
   });
