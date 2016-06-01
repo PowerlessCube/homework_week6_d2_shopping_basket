@@ -4,32 +4,9 @@
 
 var basket = {
 
-  items: [
-    item1 = {
-      name: "pasta",
-      quantity: 2,
-      price: 1.50,
-      offer: false
-    },
-    item2 = {
-      name: "crisps",
-      quantity: 4,
-      price: 0.50,
-      offer: false
-    },
-    item3 = {
-      name: "apple",
-      quantity: 4,
-      price: 0.25,
-      offer: false
-    },
-    item4 = {
-      name: "Deep Heat",
-      quantity: 3,
-      price: 7.99,
-      offer: false
-    }
-  ],
+  items: [],
+
+  storeCard: false,
 
   add: function(item) {
     this.items.unshift(item);
@@ -39,22 +16,21 @@ var basket = {
     this.items.pop();
   },
 
-  sumItemPrice: function(item) {
-    var sumItemPrice = (item.price * item.quantity);
-    return sumItemPrice;
+  totalItemPrice: function(item) {
+    var totalItemPrice = (item.price * item.quantity);
+    return totalItemPrice;
   },
 
   totalPrice: function() {
     var totalPrice = 0;
     for (var i = 0; i < this.items.length; i++) {
-      totalPrice += this.sumItemPrice(this.items[i]);
+      totalPrice += this.totalItemPrice(this.items[i]);
     }
     return totalPrice;
   }
 
-
-
 };
+
 
 //unshift was not working in my test, cheated and used .pop method instead.  Will need to come back tot his one.
 
